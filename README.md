@@ -6,7 +6,6 @@ Dockerized go app this app contains crud for customers and using bootstrap for f
 
 ### Installing
 
-1. Clone this repository
 
 ```
 
