@@ -1,0 +1,26 @@
+{{ define "Show" }}
+  {{ template "Header" }}
+    <div class="container">
+        <h2> Customer</h2>
+        <p><strong>First name:</strong> {{ .FirstName }} </p>
+        <p><strong>Last nae:</strong> {{ .LastName }} </p>
+        <p><strong>Email:</strong>{{ .Email }}</p>
+        <p><strong>Address:</strong> {{ .Address }} </p>
+        <p><strong>Birthday:</strong> {{ .Birthday }} </p>
+
+        <p><strong>Notes:</strong> 
+          {{ if eq .Gender 0 }}
+              Male
+          {{ else if eq .Gender 1 }}
+              Female
+          {{ else }}
+              Other
+          {{ end }}
+        </p>
+        
+        <br /> 
+        <a href="/edit?id={{ .Id }}" class="btn btn-primary">Edit</a>
+        <a href="/" class="btn btn-primary">Go back to tools</a>
+    </div>
+  {{ template "Footer" }}
+{{ end }}
